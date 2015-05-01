@@ -4,12 +4,15 @@ package com.varun.linkedlist;
  * Created by Varun on 4/28/2015.
  */
 public class Node {
-    Object data;
-    Node next;
+    public Object data;
+    public Node next;
 
     Node(Object data) {
         this.data = data;
         next = null;
+    }
+    Node(){
+
     }
 
     public Object getData() {

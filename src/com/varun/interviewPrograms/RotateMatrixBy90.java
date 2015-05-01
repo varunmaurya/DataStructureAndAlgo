@@ -16,7 +16,6 @@ public class RotateMatrixBy90 {
         System.out.println("Rotated Matrix ");
         printMatrices(temp);
 
-
     }
 
     private static void printMatrices(int[][] temp) {
