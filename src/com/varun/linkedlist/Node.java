@@ -12,7 +12,6 @@ public class Node {
         next = null;
     }
     Node(){
-
     }
 
     public Object getData() {

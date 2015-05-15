@@ -15,7 +15,7 @@ public class RotateMatrixBy90 {
         int[][] temp=rotateBy90degree(matrices, 3);
         System.out.println("Rotated Matrix ");
         printMatrices(temp);
-    }
+        }
 
     private static void printMatrices(int[][] temp) {
         for (int i = 0; i < 3; i++) {
@@ -27,7 +27,7 @@ public class RotateMatrixBy90 {
     }
 
     private static int[][] rotateBy90degree(int[][] matrices, int n) {
-        int[][] result = new int[3][3];
+        int[][] result = new int[n][n];
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
