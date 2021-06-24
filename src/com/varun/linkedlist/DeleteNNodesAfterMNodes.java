@@ -1,6 +1,6 @@
 package com.varun.linkedlist;
 
-import com.varun.common.Utility;
+//import com.varun.common.Utility;
 
 public class DeleteNNodesAfterMNodes {
 
@@ -24,11 +24,11 @@ public class DeleteNNodesAfterMNodes {
         n5.next = n6;
         n6.next = null;
 
-        Utility utility = new Utility();
-        utility.printLL(n0);
+
+        //printLL(n0);
         Node remainingList = deleteNAfterM(2, 1, n0);
         System.out.println("After Deleting ....");
-        utility.printLL(remainingList);
+        //printLL(remainingList);
 
     }
 

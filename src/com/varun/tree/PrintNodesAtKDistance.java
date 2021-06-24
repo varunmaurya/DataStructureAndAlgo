@@ -27,20 +27,20 @@ public class PrintNodesAtKDistance {
         n3.left=n4;
         n2.right=n5;
 
-        printNodesAtKDistance(root,n1,2);
+        prinNodesAtKDistance(root,n1,2);
 
     }
 
-    private static int printNodesAtKDistance(Node root, Node targetNode, int k) {
+    private static int prinNodesAtKDistance(Node root, Node targeNode, int k) {
         if(root == null){return -1;}
-        if(root == targetNode){ // All the nodes at k distance would be child of root node.
-            printNodesAtKDistanceBelowRoot(root, k);
+        if(root == targeNode){ // All the nodes at k distance would be child of root node.
+            prinNodesAtKDistanceBelowRoot(root, k);
             return 0;
         }
         // if target node is a part of subtree of original tree. Then there would be possible nodes at length of K in
         // parent tree structure.Lets first see on which side of the root is target?
 
-        int distLeft = printNodesAtKDistance(root.left,targetNode,k); // distleft is distance of root.left from target
+        int distLeft = prinNodesAtKDistance(root.left,targeNode,k); // distleft is distance of root.left from target
         if(distLeft !=-1){ // traversed left subtree and found the target node.
             if(1+distLeft == k){
                 System.out.println(root.left.data);
@@ -50,12 +50,12 @@ public class PrintNodesAtKDistance {
         return -1;
     }
 
-    private static void printNodesAtKDistanceBelowRoot(Node root, int k) {
+    private static void prinNodesAtKDistanceBelowRoot(Node root, int k) {
         if(root == null){return ;}
         if(k==0){
             System.out.println(root.data);
         }
-        printNodesAtKDistanceBelowRoot(root.left,k-1);
-        printNodesAtKDistanceBelowRoot(root.right,k-1);
+        prinNodesAtKDistanceBelowRoot(root.left,k-1);
+        prinNodesAtKDistanceBelowRoot(root.right,k-1);
     }
 }
